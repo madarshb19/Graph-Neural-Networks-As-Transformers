@@ -8,7 +8,7 @@ Graphormers (Ying, 2021)
 
 In the graphormer paper, the authors looked at three main ideas:-
 
-1) Centraility Encoding : This is basically the Elon Musk example I have mentioned. The important of a node in a graph is captured by calculating the number of in and out degrees of a node (i.e, the number of connections entering and leaving a node respectively).
+1) Centraility Encoding : This is basically the Elon Musk example I have mentioned. The importance of a node in a graph is captured by calculating the number of in and out degrees of a node (i.e, the number of connections entering and leaving a node respectively).
 
 2) Spatial Encoding : The attention weights in a graphormer is very similiar to the classical formula introduced in the original paper. The main differences being the introduction of learnable weight matrices multiplied to the q,k,v pairs followed by a leanable bias vector b added to the attention weights. This bias is a function of the spatial relationship between two nodes (i,j). This function could be several things. In the paper, they considered the shortest distance between i and j if te nodes are connected and -1 if they are not connected. If b is learnt as a decreasing function, the model would pay more attention to nearby nodes.
 
